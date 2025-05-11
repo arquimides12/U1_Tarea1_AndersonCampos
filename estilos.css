@@ -1,5 +1,5 @@
 body {
-    background-color: #eef1f5;
+    background-color: black;
     font-family: Verdana, sans-serif;
     margin: 40px;
   }
@@ -8,5 +8,8 @@ body {
     display: block;
     margin: 20px auto;
     text-align: center;
+  }
+  h2 {
+    color: white;
   }
   

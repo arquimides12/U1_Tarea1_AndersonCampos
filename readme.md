@@ -1,0 +1,1 @@
+se hara caso a los estilos del js por el encapsulamiento del shadowDOM 

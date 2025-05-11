@@ -1,0 +1,12 @@
+body {
+    background-color: #eef1f5;
+    font-family: Verdana, sans-serif;
+    margin: 40px;
+  }
+  
+  mi-componente {
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+  }
+  

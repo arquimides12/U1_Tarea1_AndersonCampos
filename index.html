@@ -2,23 +2,18 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Integración de Componentes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Integración de Componentes Simple</title>
   <link rel="stylesheet" href="estilos.css" />
 </head>
 <body>
 
-  <!-- tarea 1 -->
   <mi-componente precio="20.00">
     <h2 slot="titulo">Esta es mi tarea número 1</h2>
-    <p slot="contenido">Uso de slot, shadowDOM, constructores y clase template</p> 
-    <p>Este es el contenido que se mostrará en el slot por defecto.</p>
+    <p slot="contenido">Uso de slot, shadowDOM, constructores y clase template</p>
   </mi-componente>
 
-  <!-- tarea 2 -->
-  <formulario-accion>
-    <button slot="boton-enviar">Actualizar Precio</button>
-  </formulario-accion>
+  <formulario-accion></formulario-accion>
 
   <script src="mi_componente.js"></script>
   <script src="formulario-accion.js"></script>

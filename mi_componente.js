@@ -7,12 +7,18 @@ class MiComponente extends HTMLElement {
     }
 
     static get observedAttributes() {
-        return ['tema'];
+        return ['tema', 'precio']; // Ahora también escucha el atributo precio
     }
 
     attributeChangedCallback(name, oldValue, newValue) {
         if (name === 'tema') {
             this.shadowRoot.querySelector('.card').style.background = newValue;
+        }
+        if (name === 'precio') {
+            const precioElemento = this.shadowRoot.querySelector('.precio');
+            if (precioElemento) {
+                precioElemento.textContent = `Precio actualizado: $${newValue}`;
+            }
         }
     }
 
@@ -22,15 +28,13 @@ class MiComponente extends HTMLElement {
             <section class="card">
                 <h2><slot name="titulo"></slot></h2>
                 <div><slot name="contenido"></slot></div>
-                <div>
-                <slot> </slot>
-                </div> 
+                <div><slot></slot></div>
+                <p class="precio">Precio inicial: $${this.getAttribute('precio') || '0.00'}</p>
             </section>
             ${this.getStyles()}
         `;
         return template;
     }
-    
 
     getStyles() {
         return `
@@ -51,6 +55,11 @@ class MiComponente extends HTMLElement {
                     color: #555;
                     font-size: 1rem;
                 }
+                .precio {
+                    font-weight: bold;
+                    margin-top: 10px;
+                    color: #222;
+                }
             </style>
         `;
     }
@@ -63,6 +72,7 @@ class MiComponente extends HTMLElement {
         this.shadowRoot.appendChild(this.getTemplate().content.cloneNode(true));
     }
 }
+
 // Definir el nuevo elemento personalizado
 // Esto permite que el componente se pueda usar como un elemento HTML
 customElements.define('mi-componente', MiComponente);

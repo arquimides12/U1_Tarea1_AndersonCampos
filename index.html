@@ -3,19 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Componente Personalizado</title>
-  <link rel="stylesheet" href="estilo.css" />
+  <title>Integración de Componentes</title>
+  <link rel="stylesheet" href="estilos.css" />
 </head>
 <body>
 
-  <!-- Componente-->
-  <mi-componente>
-    <h2 slot="titulo"> Esta es mi tarea numero 1 (slot) </h2>
-    <p slot="contenido">Uso de slot, shadowDOM, constructores y clase templete </p> 
+  <!-- tarea 1 -->
+  <mi-componente precio="20.00">
+    <h2 slot="titulo">Esta es mi tarea número 1</h2>
+    <p slot="contenido">Uso de slot, shadowDOM, constructores y clase template</p> 
     <p>Este es el contenido que se mostrará en el slot por defecto.</p>
-
   </mi-componente>
 
+  <!-- tarea 2 -->
+  <formulario-accion>
+    <button slot="boton-enviar">Actualizar Precio</button>
+  </formulario-accion>
+
   <script src="mi_componente.js"></script>
+  <script src="formulario-accion.js"></script>
 </body>
 </html>

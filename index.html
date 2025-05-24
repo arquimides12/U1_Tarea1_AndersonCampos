@@ -1,18 +1,28 @@
-<!-- Ejemplo de componente modularizado -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Componente Avanzado</title>
+  <title>Componente espe-modal - Evaluación</title>
 </head>
 <body>
-  <!-- Uso del componente personalizado -->
+
+  <!-- Uso del componente personalizado con slots -->
   <espe-modal>
-    <span slot="titulo">Título del modal</span>
-    <p slot="contenido">Contenido dinámico desde HTML</p>
+    <span slot="titulo">Evaluación Final</span>
+    <p slot="contenido">Selecciona la nota que crees que mereces:</p>
   </espe-modal>
 
+  <!-- Importación del componente -->
   <script type="module" src="components/espe-modal.js"></script>
+
+  <!-- Listener para capturar el evento personalizado -->
+  <script>
+    document.addEventListener("modal-cerrado", (e) => {
+      console.log("Evento capturado:", e.detail.mensaje);
+      alert(e.detail.mensaje); // opcional: mostrar en pantalla también
+    });
+  </script>
+
 </body>
 </html>

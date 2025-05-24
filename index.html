@@ -1,13 +1,18 @@
+<!-- Ejemplo de componente modularizado -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarea 3</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Componente Avanzado</title>
 </head>
 <body>
+  <!-- Uso del componente personalizado -->
+  <espe-modal>
+    <span slot="titulo">Título del modal</span>
+    <p slot="contenido">Contenido dinámico desde HTML</p>
+  </espe-modal>
 
-    <script src="java.js"></script>
+  <script type="module" src="components/espe-modal.js"></script>
 </body>
 </html>
